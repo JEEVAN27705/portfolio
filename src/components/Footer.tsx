@@ -29,11 +29,11 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/alex", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/alex", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/alex", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com/alex", label: "Instagram" },
-    { icon: Mail, href: "mailto:alex@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/JEEVAN27705", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/jeevan-patil-23a789320/", label: "LinkedIn" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/jeevanpatil27705/", label: "Instagram" },
+    { icon: Mail, href: "mailto:jeevanpatil27705@example.com", label: "Email" },
   ];
 
   return (
@@ -52,7 +52,7 @@ export default function Footer() {
             {/* About Section */}
             <div className="lg:col-span-2 space-y-6">
               <Link to="/" className="text-3xl font-bold text-gradient mb-4 inline-block hover:scale-105 transition-transform">
-                Jeevan Portfolio
+                Portfolio
               </Link>
               <p className="text-muted-foreground leading-relaxed text-lg">
                 A passionate software engineer and QA tester dedicated to creating 

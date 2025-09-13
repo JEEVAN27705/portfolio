@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Moon, Sun, Menu, X, Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Sun, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
 
@@ -26,18 +26,6 @@ export default function Navigation() {
     { name: "Achievements", path: "/achievements" },
     { name: "Contact", path: "/contact" },
   ];
-
-  const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Mail, href: "/contact", label: "Email" },
-  ];
-
-  const toggleTheme = () => {
-    // Theme is always dark now - no switching needed
-    // This function can be removed but keeping for UI consistency
-  };
 
   return (
     <nav
@@ -75,46 +63,10 @@ export default function Navigation() {
                 />
               </Link>
             ))}
-            
-            {/* Social Links */}
-            <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-muted">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="p-2 rounded-full hover:bg-muted/50 hover:scale-110 transition-all duration-300 group"
-                  aria-label={label}
-                >
-                  <Icon className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors" />
-                </a>
-              ))}
-            </div>
-            
-            {/* Theme Toggle - Always Dark Mode */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="relative p-3 rounded-xl glass-morphism hover:scale-110 transition-all duration-300 hover:shadow-xl group ml-4"
-            >
-              <div className="relative">
-                <Sun className="h-5 w-5 text-foreground group-hover:text-accent transition-colors animate-spin-slow" />
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-sm -z-10" />
-              </div>
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              className="relative p-3 rounded-xl glass-morphism hover:scale-110 transition-all duration-300 hover:shadow-xl group"
-            >
-              <div className="relative">
-                <Sun className="h-5 w-5 text-foreground group-hover:text-accent transition-colors animate-spin-slow" />
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity blur-sm -z-10" />
-              </div>
-            </Button>
+          <div className="lg:hidden flex items-center">
             <Button
               variant="ghost"
               size="sm"
@@ -149,23 +101,6 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
-            
-            {/* Mobile Social Links */}
-            <div className="pt-4 border-t border-muted">
-              <p className="text-sm font-medium text-muted-foreground mb-3 px-4">Connect with me</p>
-              <div className="flex justify-center space-x-4">
-                {socialLinks.map(({ icon: Icon, href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    className="p-3 rounded-xl hover:bg-muted/50 hover:scale-110 transition-all duration-300 group"
-                    aria-label={label}
-                  >
-                    <Icon className="h-5 w-5 text-muted-foreground group-hover:text-accent transition-colors" />
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

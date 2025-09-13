@@ -1,9 +1,23 @@
 import { useState, useEffect } from "react";
-import { Code, Database, Palette, Zap, Award, Users, GraduationCap, Calendar, MapPin } from "lucide-react";
+import { Code, Database, Palette, Zap, Award, Users, GraduationCap, Calendar, MapPin, Download, MessageCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import profileImage from "@/assets/profile-image.jpg";
+import profileImage from "@/assets/profile-image.png";
+
+// Tech logos
+import reactLogo from "@/assets/tech/react.svg";
+import typescriptLogo from "@/assets/tech/typescript.svg";
+import nodejsLogo from "@/assets/tech/nodejs.svg";
+import pythonLogo from "@/assets/tech/python.svg";
+import postgresqlLogo from "@/assets/tech/postgresql.svg";
+import mongodbLogo from "@/assets/tech/mongodb.svg";
+import awsLogo from "@/assets/tech/aws.svg";
+import dockerLogo from "@/assets/tech/docker.svg";
+import gitLogo from "@/assets/tech/git.svg";
+import figmaLogo from "@/assets/tech/figma.svg";
+import graphqlLogo from "@/assets/tech/graphql.svg";
+import redisLogo from "@/assets/tech/redis.svg";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,60 +26,49 @@ export default function About() {
     setIsVisible(true);
   }, []);
 
-  const education = [
-    {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of California, Berkeley",
-      period: "2014 - 2018",
-      description: "Graduated Magna Cum Laude with focus on Software Engineering and Human-Computer Interaction.",
-      achievements: ["Dean's List 6 semesters", "Computer Science Honor Society", "Senior Capstone Award"]
-    },
-    {
-      degree: "Certified Scrum Master (CSM)",
-      institution: "Scrum Alliance",
-      period: "2020",
-      description: "Certified in Agile methodologies and project management practices.",
-      achievements: ["Advanced Scrum Practices", "Team Leadership", "Agile Coaching"]
-    },
-    {
-      degree: "AWS Certified Solutions Architect",
-      institution: "Amazon Web Services",
-      period: "2021",
-      description: "Certified in designing distributed systems and cloud architecture on AWS.",
-      achievements: ["Cloud Architecture", "Security Best Practices", "Cost Optimization"]
-    }
-  ];
+const education = [
+  {
+    degree: "Bachelor of Computer Engineering",
+    institution: "Pimpri Chinchwad College of Engineering and Research",
+    period: "2023 - Present",
+    description: "Pursuing undergraduate studies in Computer Engineering with strong academic performance.",
+    achievements: [
+      "Current CGPA: 8.86",
+      "Active participant in hackathons and coding contests",
+      "Worked on multiple academic and technical projects"
+    ]
+  },
+  {
+    degree: "Higher Secondary Certificate (HSC) - Computer Science",
+    institution: "S.B. Patil College of Science and Commerce",
+    period: "2021 - 2023",
+    description: "Completed HSC with specialization in Computer Science.",
+    achievements: [
+      "Built strong foundation in programming and mathematics",
+      "Secured distinction in Computer Science",
+      "Participated in inter-college technical and cultural events"
+    ]
+  },
+  {
+    degree: "Secondary School Certificate (SSC)",
+    institution: "St. Jude High School",
+    period: "2008 - 2017",
+    description: "Completed SSC with focus on academics and extracurricular activities.",
+    achievements: [
+      "Secured 76% in SSC",
+      "Class representative and event coordinator",
+      "Actively participated in science exhibitions and sports events"
+    ]
+  }
+];
 
-  const experience = [
-    {
-      role: "Senior Full-Stack Developer",
-      company: "TechCorp Inc.",
-      period: "2022 - Present",
-      description: "Leading development of enterprise web applications using React, Node.js, and AWS. Mentoring junior developers and implementing best practices.",
-      achievements: ["Reduced load times by 40%", "Led team of 5 developers", "Implemented CI/CD pipeline"],
-    },
-    {
-      role: "Frontend Developer",
-      company: "StartupXYZ",
-      period: "2020 - 2022",
-      description: "Built responsive web applications with React and TypeScript. Collaborated closely with designers to implement pixel-perfect UIs.",
-      achievements: ["Built 3 major products", "Improved user engagement by 60%", "Established design system"],
-    },
-    {
-      role: "UI/UX Designer",
-      company: "Design Studio",
-      period: "2018 - 2020",
-      description: "Created user-centered designs for mobile and web applications. Conducted user research and usability testing.",
-      achievements: ["Designed 50+ interfaces", "Increased conversion by 35%", "Led user research initiatives"],
-    },
-  ];
+ const stats = [
+  { icon: Code, label: "Projects Completed", value: "10+" },
+  { icon: Users, label: "Hackathons & Events", value: "5+" },
+  { icon: Award, label: "Years of Experience", value: "2+" },
+  { icon: Zap, label: "Technologies Mastered", value: "15+" },
+];
 
-  const stats = [
-    { icon: Code, label: "Projects Completed", value: "50+" },
-    { icon: Users, label: "Happy Clients", value: "30+" },
-    { icon: Award, label: "Years Experience", value: "6+" },
-    { icon: Zap, label: "Technologies", value: "25+" },
-  ];
 
   return (
     <div className="min-h-screen pt-16">
@@ -116,59 +119,79 @@ export default function About() {
       <section className="py-20">
         <div className="container px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Profile Image */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative group">
-                <div className="w-[500px] h-[500px] rounded-3xl overflow-hidden border-4 border-accent/20 shadow-2xl hover:scale-105 transition-transform duration-500">
-                  <img
-                    src={profileImage}
-                    alt="Jeevan Patil - About Me"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                {/* Floating elements */}
-                <div className="absolute -top-6 -right-6 w-12 h-12 bg-accent/20 rounded-full animate-float" />
-                <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-secondary/30 rounded-full animate-bounce" />
-                <div className="absolute top-1/2 -left-12 w-6 h-6 bg-primary/25 rounded-full animate-pulse" />
-              </div>
-            </div>
+{/* Profile Image */}
+{/* Profile Image */}
+<div className="flex justify-center lg:justify-start">
+  <div className="relative group lg:translate-x-16"> {/* Shifted to the right */}
+    <div className="rounded-3xl overflow-hidden border-4 border-accent/20 shadow-2xl hover:scale-105 transition-transform duration-500">
+      <img
+        src={profileImage}
+        alt="Jeevan Patil - About Me"
+        className="w-[500px] max-w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" 
+      />
+    </div>
+    {/* Floating elements */}
+    <div className="absolute -top-6 -right-6 w-12 h-12 bg-accent/20 rounded-full animate-float" />
+    <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-secondary/30 rounded-full animate-bounce" />
+    <div className="absolute top-1/2 -left-12 w-6 h-6 bg-primary/25 rounded-full animate-pulse" />
+  </div>
+</div>
+
+
+
+
 
             {/* Description */}
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-gradient mb-6">
-                My Story
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm Jeevan Patil, a Computer Engineering student passionate about creating innovative solutions through 
-                software development, quality assurance, and machine learning. Currently seeking opportunities to 
-                contribute to impactful projects while continuously learning and growing in the tech industry.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                As a full stack developer, I specialize in building end-to-end web applications using modern technologies 
-                like React, Node.js, and various databases. My journey combines academic learning with practical 
-                experience in creating scalable and user-friendly applications.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                My expertise spans across frontend development with React and TypeScript, backend development with 
-                Node.js and Python, quality assurance through comprehensive testing, and exploring machine learning 
-                applications. I believe in writing clean, maintainable code that solves real-world problems.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, 
-                or working on innovative solutions that push the boundaries of what's possible in software development.
-              </p>
+           <div className="space-y-6">
+  <h2 className="text-4xl font-bold text-gradient mb-6">
+    My Story
+  </h2>
+ <p className="text-lg text-muted-foreground leading-relaxed text-justify">
+  I am a motivated and detail-oriented Computer Engineering student with a strong foundation in software development, 
+  automation testing, and machine learning. I am proficient in Python, Java, SQL, and web technologies, with hands-on 
+  experience in building real-world projects including a hate speech detection system and a chat application.
+</p>
+<p className="text-lg text-muted-foreground leading-relaxed text-justify">
+  Skilled in using <span className="font-medium text-foreground">Selenium WebDriver</span> for automating test scenarios 
+  and ensuring web application quality. I am comfortable working with tools like <span className="font-medium text-foreground">FastAPI, ReactJS, and Streamlit</span>.
+</p>
+<p className="text-lg text-muted-foreground leading-relaxed text-justify">
+  Passionate about continuous learning, I strive to grow my expertise in both software development and quality assurance. 
+  I am eager to contribute to a dynamic tech team where I can bring value through innovative development and robust testing practices.
+</p>
 
-              {/* Quick Stats */}
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="text-center p-4 bg-muted/30 rounded-lg">
-                  <div className="text-2xl font-bold text-gradient">6+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
-                <div className="text-center p-4 bg-muted/30 rounded-lg">
-                  <div className="text-2xl font-bold text-gradient">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
-                </div>
-              </div>
+
+{/* Action Buttons */}
+<div className="flex flex-col sm:flex-row gap-4 pt-6">
+  {/* Resume Download */}
+  <a
+    href="/resume.pdf"
+    download="Jeevan_Patil_Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      size="lg"
+      className="flex items-center gap-2 hover:scale-105 hover:shadow-lg hover:bg-accent/90 transition-all duration-300"
+    >
+      <Download className="h-5 w-5" />
+      Download Resume
+    </Button>
+  </a>
+
+  {/* Connect Button */}
+  <a href="mailto:jeevanpatil27705@gmail.com">
+    <Button
+      variant="outline"
+      size="lg"
+      className="flex items-center gap-2 hover:scale-105 hover:shadow-md transition-all duration-300"
+    >
+      <MessageCircle className="h-5 w-5" />
+      Connect with Me
+    </Button>
+  </a>
+</div>
+              
             </div>
           </div>
         </div>
@@ -179,10 +202,10 @@ export default function About() {
         <div className="container px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
-              Education & Certifications
+              Education
             </h2>
             <p className="text-xl text-muted-foreground">
-              My academic background and professional certifications
+              My academic background
             </p>
           </div>
 
@@ -231,88 +254,42 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="py-20 bg-section-bg">
-        <div className="container px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
-              Experience
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              My professional journey and key achievements
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-8">
-            {experience.map((exp, index) => (
-              <Card
-                key={exp.role}
-                className="p-8 glass-morphism border-0 hover:shadow-xl transition-all duration-300"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-gradient">{exp.role}</h3>
-                    <p className="text-lg text-foreground">{exp.company}</p>
-                  </div>
-                  <div className="text-sm text-muted-foreground font-medium bg-muted px-3 py-1 rounded-full">
-                    {exp.period}
-                  </div>
-                </div>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {exp.description}
-                </p>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm text-accent">Key Achievements:</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3" />
-                        {achievement}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Technologies Section */}
-      <section className="py-20">
-        <div className="container px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
-              Technologies I Love
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Tools and technologies I work with daily
-            </p>
-          </div>
+     <section className="py-20">
+  <div className="container px-4 lg:px-8">
+    <div className="text-center mb-16">
+     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+  Technologies I Love
+</h2>
+
+<p className="text-xl text-muted-foreground mt-4">
+  Tools and technologies I work with daily
+</p>
+
+    </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {[
-              { name: "React", icon: "⚛️" },
-              { name: "TypeScript", icon: "📘" },
-              { name: "Node.js", icon: "🟢" },
-              { name: "Python", icon: "🐍" },
-              { name: "PostgreSQL", icon: "🐘" },
-              { name: "MongoDB", icon: "🍃" },
-              { name: "AWS", icon: "☁️" },
-              { name: "Docker", icon: "🐳" },
-              { name: "Git", icon: "📦" },
-              { name: "Figma", icon: "🎨" },
-              { name: "GraphQL", icon: "🔗" },
-              { name: "Redis", icon: "📊" },
+              { name: "React", logo: reactLogo },
+              { name: "TypeScript", logo: typescriptLogo },
+              { name: "Node.js", logo: nodejsLogo },
+              { name: "Python", logo: pythonLogo },
+              { name: "PostgreSQL", logo: postgresqlLogo },
+              { name: "MongoDB", logo: mongodbLogo },
+              { name: "Git", logo: gitLogo },
+              { name: "Figma", logo: figmaLogo },
             ].map((tech, index) => (
               <Card
                 key={tech.name}
                 className="p-6 text-center glass-morphism border-0 hover:scale-110 transition-all duration-300 group cursor-pointer"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">
-                  {tech.icon}
+                <div className="mb-3 group-hover:scale-125 transition-transform duration-300 flex justify-center items-center h-12">
+                  <img 
+                    src={tech.logo} 
+                    alt={tech.name}
+                    className="h-10 w-10 object-contain"
+                  />
                 </div>
                 <div className="text-sm font-medium text-muted-foreground group-hover:text-accent transition-colors">
                   {tech.name}

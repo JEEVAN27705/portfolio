@@ -22,6 +22,10 @@ import { Link } from "react-router-dom";
 import TypingAnimation from "@/components/TypingAnimation";
 import Footer from "@/components/Footer";
 import profileImage from "@/assets/profile-image.jpg";
+import projectImg from "@/assets/project.jpg";
+import project2Img from "@/assets/project2.jpg";
+import project3Img from "@/assets/project3.jpg";
+
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,37 +44,34 @@ export default function Home() {
   const featuredProjects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Payroll Management System",
       description:
-        "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features payment processing and admin dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+        "Developed a web-based payroll management system to automate salary calculation, attendance tracking, and employee data ",
+      image: projectImg,
+      technologies: ["HTML", "CSS", "PHP", "MySQL"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/JEEVAN27705/PayrollManagementSystem",
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "REAL-TIME CHATROOM WITH HATE SPEECH FILTERING",
       description:
-        "Collaborative project management tool with real-time updates and drag-and-drop functionality.",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=600&q=80",
-      technologies: ["React", "Socket.io", "MongoDB"],
+        "A PHP-based chatroom app that blocks hate speech using an ML model.Offensive messages are flagged, while normal messages are stored in the database",
+      image:project2Img,
+      technologies: ["PHP", "MySQL", "Javascript", "HTML", "CSS", "Fast API", "cURL"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      id: 3,
-      title: "Analytics Dashboard",
-      description:
-        "Real-time analytics dashboard with interactive charts and data visualization.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
-      technologies: ["React", "D3.js", "Python", "FastAPI"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
+  id: 3,
+  title: "PORTFOLIO WEBSITE WITH REACT + TYPESCRIPT",
+  description:
+    "A responsive personal portfolio website built using React and TypeScript. Features dynamic project showcase, smooth navigation, and modern UI design.",
+  image: project3Img,
+  technologies: ["React", "TypeScript", "HTML", "CSS"],
+  liveUrl: "#",
+  githubUrl: "#",
+},
   ];
 
   return (
@@ -129,12 +130,16 @@ export default function Home() {
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
                   Hi, I'm <span className="text-gradient">Jeevan Patil</span>
                 </h1>
-
+                
                 {/* Typing Animation */}
                 <div className="text-2xl md:text-3xl font-medium text-white/90 h-16 flex items-center justify-center lg:justify-start mb-8">
                   <TypingAnimation texts={typingTexts} className="text-accent" />
                 </div>
 
+                <div className="text-2xl md:text-3xl font-medium text-white/90 flex items-center justify-center lg:justify-start mb-8">
+                    Blending logic with creativity to craft meaningful solutions.
+                </div>
+                
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Button
@@ -190,18 +195,18 @@ export default function Home() {
             {[
               {
                 icon: Code,
-                title: "Software Development",
-                description: "Building scalable applications with modern technologies. Focus on clean, maintainable code and best practices.",
+                title: "Web Development",
+                description: "Building scalable, responsive web apps with clean, maintainable code and best practices",
               },
               {
                 icon: Zap,
                 title: "Quality Assurance",
-                description: "Comprehensive testing strategies to ensure reliable software through automated and manual testing approaches.",
+                description: "Comprehensive testing strategies to ensure reliable software through automated and manual testing approaches",
               },
               {
                 icon: Palette,
                 title: "UI/UX Design",
-                description: "Creating intuitive user experiences through research, prototyping, and iterative design focused on usability.",
+                description: "Creating intuitive user experiences through research, prototyping, and iterative design focused on usability",
               },
             ].map((service, index) => (
               <Card
@@ -395,27 +400,19 @@ export default function Home() {
           <div className="max-w-5xl mx-auto space-y-8">
             {[
               {
-                role: "Senior Full-Stack Developer",
-                company: "TechCorp Inc.",
-                period: "2022 - Present",
-                description: "Leading development of enterprise web applications using React, Node.js, and AWS. Mentoring junior developers and implementing best practices.",
-                achievements: ["Reduced load times by 40%", "Led team of 5 developers", "Implemented CI/CD pipeline"],
+                role: "Beta Tester",
+                company: "Eklavya.me",
+                period: "September 2025 - Present",
+                description: "Contributed by identifying bugs, evaluating user experience, and providing actionable feedback to improve overall product quality before release",
+                achievements: ["Reported critical bugs and improved app stability.", "Contributed feedback that reduced post-launch issues", "Wrote detailed bug reports and test cases"],
                 type: "current"
               },
               {
-                role: "Frontend Developer & QA Lead",
-                company: "StartupXYZ",
-                period: "2020 - 2022",
+                role: "Manual Quality Assurance Tester",
+                company: "PRAM Educate IT Software LLP ",
+                period: "June 2025-August 2025",
                 description: "Built responsive web applications with React and TypeScript. Established comprehensive testing strategies and quality assurance processes.",
-                achievements: ["Built 3 major products", "Improved user engagement by 60%", "Established testing framework"],
-                type: "past"
-              },
-              {
-                role: "UI/UX Designer",
-                company: "Design Studio",
-                period: "2018 - 2020",
-                description: "Created user-centered designs for mobile and web applications. Conducted user research and usability testing to improve product experiences.",
-                achievements: ["Designed 50+ interfaces", "Increased conversion by 35%", "Led user research initiatives"],
+                achievements: ["Identified critical bugs and UI issues, improving app performance.", "Logged and tracked bugs using Jira,", "Practiced API testing & web automation."],
                 type: "past"
               },
             ].map((exp, index) => (

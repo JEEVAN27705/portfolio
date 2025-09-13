@@ -11,117 +11,118 @@ export default function Achievements() {
     setIsVisible(true);
   }, []);
 
-  const achievements = [
-    {
-      id: 1,
-      title: "AWS Certified Developer",
-      organization: "Amazon Web Services",
-      date: "2023",
-      description: "Professional certification in AWS cloud development and deployment strategies.",
-      icon: Award,
-      category: "certification",
-      color: "bg-orange-500",
-    },
-    {
-      id: 2,
-      title: "React Advanced Certification", 
-      organization: "Meta",
-      date: "2022",
-      description: "Advanced certification covering React ecosystem, state management, and performance optimization.",
-      icon: Trophy,
-      category: "certification", 
-      color: "bg-blue-500",
-    },
-    {
-      id: 3,
-      title: "Best Innovation Award",
-      organization: "TechCorp Annual Awards",
-      date: "2023",
-      description: "Recognized for developing an AI-powered testing framework that reduced bug detection time by 60%.",
-      icon: Star,
-      category: "award",
-      color: "bg-yellow-500",
-    },
-    {
-      id: 4,
-      title: "Google UX Design Certificate",
-      organization: "Google",
-      date: "2021",
-      description: "Comprehensive UX design certification covering user research, prototyping, and design systems.",
-      icon: BookOpen,
-      category: "certification",
-      color: "bg-green-500",
-    },
-    {
-      id: 5,
-      title: "Team Leadership Excellence",
-      organization: "StartupXYZ",
-      date: "2022", 
-      description: "Led a cross-functional team of 8 developers to deliver 3 major products ahead of schedule.",
-      icon: Users,
-      category: "award",
-      color: "bg-purple-500",
-    },
-    {
-      id: 6,
-      title: "Open Source Contributor",
-      organization: "GitHub",
-      date: "2020-Present",
-      description: "Active contributor to 15+ open source projects with 500+ merged pull requests.",
-      icon: Globe,
-      category: "achievement",
-      color: "bg-indigo-500",
-    },
-  ];
+const achievements = [
+  {
+    id: 1,
+    title: "Silver Medal – State Level Karate Championship",
+    organization: "State Sports Association",
+    date: "2018",
+    description: "Awarded Silver Medal for exceptional performance in State Level Karate Championship.",
+    icon: Award,
+    category: "Awards & Honors",
+    color: "bg-orange-500",
+  },
+  {
+    id: 2,
+    title: "Best Project Award - PCCOER College",
+    organization: "PCCOER College",
+    date: "2023",
+    description: "Recognized for outstanding project development and innovation.",
+    icon: Trophy,
+    category: "Project Achievements",
+    color: "bg-blue-500",
+  },
+  {
+    id: 3,
+    title: "Captain – Inter-District Hockey Tournament",
+    organization: "District Sports Association",
+    date: "2019-2021",
+    description: "Led the district hockey team as Captain, demonstrating leadership and teamwork.",
+    icon: Star,
+    category: "Leadership Roles",
+    color: "bg-yellow-500",
+  },
+  {
+    id: 4,
+    title: "Lead of PIC",
+    organization: "Project Innovation Club",
+    date: "2025-Present",
+    description: "Appointed as Lead to manage and contribute towards conduction smooth events.",
+    icon: Users,
+    category: "Leadership Roles",
+    color: "bg-purple-500",
+  },
+  {
+    id: 5,
+    title: "Certifications",
+    organization: "HakerRank",
+    date: "2025",
+    description: "Earned certifications in MySQL",
+    icon: BookOpen,
+    category: "Certifications",
+    color: "bg-green-500",
+  },
+  {
+    id: 6,
+    title: "Participation in Competitions & Championships",
+    organization: "Hockey & Karate",
+    date: "2018-Present",
+    description: "Participated and represented in multiple competitions, including hockey tournaments and karate championships.",
+    icon: Globe,
+    category: "Competitions & Championships",
+    color: "bg-indigo-500",
+  },
+];
 
-  const volunteerWork = [
-    {
-      id: 1,
-      title: "Code for Good Volunteer",
-      organization: "Tech4Good Initiative", 
-      period: "2022 - Present",
-      description: "Developing web applications for non-profit organizations to help them manage donations, volunteers, and community outreach programs.",
-      impact: "Helped 5 nonprofits improve their digital presence",
-      icon: Heart,
-      color: "bg-red-500",
-    },
-    {
-      id: 2,
-      title: "Youth Coding Mentor",
-      organization: "Local Community Center",
-      period: "2021 - Present", 
-      description: "Teaching programming fundamentals to underprivileged youth aged 12-18, focusing on web development and problem-solving skills.",
-      impact: "Mentored 30+ students, 15 went on to tech careers",
-      icon: BookOpen,
-      color: "bg-emerald-500",
-    },
-    {
-      id: 3,
-      title: "Accessibility Advocate",
-      organization: "Web Accessibility Foundation",
-      period: "2023 - Present",
-      description: "Conducting free website accessibility audits for small businesses and providing recommendations for inclusive design.",
-      impact: "Improved accessibility for 20+ small businesses",
-      icon: Users,
-      color: "bg-cyan-500",
-    },
-    {
-      id: 4,
-      title: "Open Source Maintainer",
-      organization: "Community Projects",
-      period: "2020 - Present",
-      description: "Maintaining several open source libraries focused on React components and testing utilities used by 1000+ developers.",
-      impact: "50K+ weekly downloads across projects", 
-      icon: Globe,
-      color: "bg-violet-500",
-    },
-  ];
+const volunteerWork = [
+  {
+    id: 1,
+    title: "Global Entrepreneur Conclave",
+    organization: "National Level Event",
+    period: "2024",
+    description: "Assisted with event coordination and provided technical support for smooth execution of the conclave.",
+    impact: "Ensured seamless technical operations and enhanced attendee experience",
+    icon: Globe,
+    color: "bg-indigo-500",
+  },
+  {
+    id: 2,
+    title: "Technical Member - ACM",
+    organization: "ACM College Chapter",
+    period: "2024 - 2025",
+    description: "Assisted in setting up technical infrastructure for workshops and events, supporting smooth execution.",
+    impact: "Enabled successful delivery of multiple technical events and workshops",
+    icon: Users,
+    color: "bg-emerald-500",
+  },
+  {
+    id: 3,
+    title: "Technical Member - Navdhara",
+    organization: "State Level Project Competition",
+    period: "2022",
+    description: "Managed the official event website and ensured smooth online operations during the competition.",
+    impact: "Streamlined event management, resulting in better participant experience",
+    icon: Trophy,
+    color: "bg-cyan-500",
+  },
+  {
+    id: 4,
+    title: "Event Member - PIC",
+    organization: "Project Innovation Club",
+    period: "2024 - 2025",
+    description: "Actively participated in club activities, providing mentorship and assisting in project initiatives.",
+    impact: "Contributed to technical guidance and event management and focused on growth of club projects",
+    icon: Star,
+    color: "bg-violet-500",
+  },
+];
 
-  const categories = [
-    { id: "certification", label: "Certifications", icon: Award },
-    { id: "award", label: "Awards", icon: Trophy },
-    { id: "achievement", label: "Achievements", icon: Star },
-  ];
+
+ const categories = [
+  { id: "certifications", label: "Certifications & Awards", icon: Award }, 
+  { id: "leadership", label: "Leadership Roles", icon: Users },     
+  { id: "competitions", label: "Competitions & Achievements", icon: Trophy } 
+];
 
   return (
     <div className="min-h-screen pt-16">
@@ -134,7 +135,7 @@ export default function Achievements() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Achievements & <span className="text-gradient">Impact</span>
+              Achievements & <span className="text-gradient">Volunteering</span>
             </h1>
             <p
               className={`text-xl text-white/90 mb-8 leading-relaxed transition-all duration-1000 delay-200 ${

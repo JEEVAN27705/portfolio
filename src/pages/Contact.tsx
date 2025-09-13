@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,20 +58,26 @@ export default function Contact() {
     {
       icon: Github,
       label: "GitHub",
-      href: "#",
+      href: "https://github.com/JEEVAN27705",
       color: "hover:text-gray-900 dark:hover:text-white",
     },
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "#",
+      href: "https://www.linkedin.com/in/jeevan-patil-23a789320/",
       color: "hover:text-blue-600",
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      href: "#",
+      icon: Instagram,
+      label: "Instagram",
+      href: "https://www.instagram.com/jeevanpatil27705/",
       color: "hover:text-blue-400",
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      href: "mailto:jeevanpatil27705@gmail.com",
+      color: "hover:text-red-600",
     },
   ];
 

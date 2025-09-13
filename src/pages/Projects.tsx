@@ -4,6 +4,10 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Footer from "@/components/Footer";
+import projectImg from "@/assets/project.jpg";
+import project2Img from "@/assets/project2.jpg";
+import project3Img from "@/assets/project3.jpg";
+
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,69 +20,39 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+      title: "Payroll Management System",
+      description:
+        "Developed a web-based payroll management system to automate salary calculation, attendance tracking, and employee data.",
+      image: projectImg,
+      technologies: ["HTML", "CSS", "PHP", "MySQL"],
       liveUrl: "#",
-      githubUrl: "#",
-      category: "full-stack",
+      githubUrl: "https://github.com/JEEVAN27705/PayrollManagementSystem",
       featured: true,
+      category: "full-stack",
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features. Built with modern React patterns.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "TypeScript", "Socket.io", "MongoDB", "Express"],
+      title: "REAL-TIME CHATROOM WITH HATE SPEECH FILTERING",
+      description:
+        "A PHP-based chatroom app that blocks hate speech using an ML model. Offensive messages are flagged, while normal messages are stored in the database.",
+      image: project2Img,
+      technologies: ["PHP", "MySQL", "Javascript", "HTML", "CSS", "Fast API", "cURL"],
       liveUrl: "#",
       githubUrl: "#",
-      category: "frontend",
       featured: true,
+      category: ["Machine Learning", "full-stack"],
     },
     {
       id: 3,
-      title: "AI Chat Interface",
-      description: "Modern chat interface for AI conversations with message streaming, syntax highlighting, and export functionality. Optimized for performance and user experience.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "TypeScript", "WebSockets", "OpenAI API", "Tailwind"],
+      title: "PORTFOLIO WEBSITE WITH REACT + TYPESCRIPT",
+      description:
+        "A responsive personal portfolio website built using React and TypeScript. Features dynamic project showcase, smooth navigation, and modern UI design.",
+      image:project3Img,
+      technologies: ["React", "TypeScript", "HTML", "CSS"],
       liveUrl: "#",
       githubUrl: "#",
-      category: "frontend",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "Analytics Dashboard",
-      description: "Real-time analytics dashboard with interactive charts, data visualization, and reporting features. Built for scalability and performance.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "Redis", "Docker"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "full-stack",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Mobile Banking App",
-      description: "Secure mobile banking application with biometric authentication, transaction history, and financial insights. Focus on security and user experience.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React Native", "TypeScript", "Node.js", "PostgreSQL", "JWT"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "mobile",
       featured: true,
-    },
-    {
-      id: 6,
-      title: "Portfolio Website",
-      description: "Responsive portfolio website with modern animations, dark/light theme, and optimized performance. Built with attention to detail and user experience.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "TypeScript", "Tailwind", "Framer Motion", "Vite"],
-      liveUrl: "#",
-      githubUrl: "#",
       category: "frontend",
-      featured: false,
     },
   ];
 
@@ -86,14 +60,16 @@ export default function Projects() {
     { id: "all", label: "All Projects" },
     { id: "full-stack", label: "Full-Stack" },
     { id: "frontend", label: "Frontend" },
-    { id: "mobile", label: "Mobile" },
+    { id: "Machine Learning", label: "Machine Learning" },
   ];
 
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === filter);
-
-  const featuredProjects = projects.filter(project => project.featured);
+  const filteredProjects = filter === "all"
+    ? projects
+    : projects.filter(project =>
+        Array.isArray(project.category)
+          ? project.category.includes(filter)
+          : project.category === filter
+      );
 
   return (
     <div className="min-h-screen pt-16">
@@ -173,7 +149,7 @@ export default function Projects() {
                   <h3 className="text-xl font-bold mb-2 text-gradient group-hover:text-accent transition-colors">
                     {project.title}
                   </h3>
-                 <p className="text-muted-foreground text-sm mb-4">
+                  <p className="text-muted-foreground text-sm mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-1 mb-4">
