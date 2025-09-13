@@ -70,7 +70,7 @@ export default function Home() {
   image: project3Img,
   technologies: ["React", "TypeScript", "HTML", "CSS"],
   liveUrl: "#",
-  githubUrl: "#",
+  githubUrl: "https://github.com/JEEVAN27705/portfolio",
 },
   ];
 
